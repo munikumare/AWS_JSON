@@ -168,5 +168,15 @@
     "InstanceId" : { "Ref" : "myEc2Instance" }
 }
 }
+},
+"Outputs" : {
+  "InstanceID" : {
+    "Description" : "EC2 Instance ID",
+    "Value" : {"Ref" : "myEc2Instance"}
+  },
+  "Publicip" : {
+    "Description" : "Ec2 Instance public ip address",
+    "Value" : { "Fn::GetAtt" : [ "myEc2Instance", "PublicIp" ]}
+  }
 }
 }
